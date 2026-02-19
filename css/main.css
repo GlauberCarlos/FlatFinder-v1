@@ -1,0 +1,133 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Baloo';
+    src: url('../fonts/Baloo2-VariableFont_wght.ttf');
+}
+
+:root {
+    --azul-dark: #36557D;
+    --azul-medium: #6C91C0;
+    --azul-light: #91A3BA;
+    --azul-box: #F1F4F9;
+    --branco: #FFFFFF;
+    --transparente: #ffffffb0;
+    --bgi: url("../images/background/bgi1.jpg");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-image:
+        linear-gradient(#ffffffa4, #ffffff5b),
+        var(--bgi);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    box-sizing: border-box;
+    font-family: 'Baloo', sans-serif;
+    margin: 0;
+    padding-bottom: 5rem;
+}
+
+.hello {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 1.5rem 3.5rem 6rem;
+    background: var(--transparente);
+    border-radius: 15px;
+    box-shadow: 2px 4px 4px var(--azul-light);
+}
+
+.hello-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--azul-medium);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hello-subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--azul-light);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+a {
+    all: unset;
+}
+
+.button-dark,
+.button-light {
+    all: unset;
+    color: var(--branco);
+    font-weight: 600;
+    padding: 0.7rem 3rem;
+}
+
+.button-dark {
+    background-color: var(--azul-dark);
+}
+
+.button-light {
+    background-color: var(--azul-light);
+}
+
+.button-dark:hover {
+    background-color: var(--azul-medium);
+    cursor: pointer;
+}
+
+.button-light:hover {
+    background-color: var(--azul-medium);
+    cursor: pointer;
+}
+
+.links {
+    color: var(--azul-dark);
+    border-bottom: var(--azul-dark) solid 2px;
+    cursor: pointer;
+}
+
+.links:hover {
+    color: var(--azul-light);
+}
+
+@media (max-width: 1024px) {
+    body {
+        background-image:
+        linear-gradient(#ffffffa4, #ffffff5b),
+        url("../images/background/bgiMobile.jpg");
+    }
+
+    .hello {
+        margin-top: 15rem;
+        max-width: 95%;
+        padding: 1rem 0.5rem 3rem;
+        box-shadow: none;
+        border: var(--azul-light) solid 1px;
+    }
+
+    .hello-title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .hello-subtitle {
+    font-size: 1.2rem;
+}
+}

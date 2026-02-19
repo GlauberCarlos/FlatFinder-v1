@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/user.css">
+
+<body>
+    <div id="header">
+        <div class="header-left">
+            <img src="images/flatfinder.svg" class="logo" alt="logo"></img>
+        </div>
+        <div class="header-links">
+            <a href="index.html">home</a>
+            <a href="all-flats.html">all flats</a>
+            <a href="new-flat.html">new flat</a>
+            <a href="profile.html" class="active">profile</a>
+        </div>
+        <div class="header-greetings">
+            <div>Hello, <span id="greetings">Convidado</span>!</div>
+            <button class="logout" onclick="logout()">Logout <img src="images/logout.svg" alt=""></button>
+        </div>
+    </div>
+
+    <main class="hello">
+        <h2 class="hello-title">Your account details, <span id="show-fName"></span></h2>
+        <h2 class="hello-subtitle">Click to edit</h2>
+        <p class="profile-email">email@email.com</p>
+        <div class="hello-profile">
+            <div class="edit-block-left">
+                <div class="box-create-profile">
+                    <div class="create-profile">
+                        <div class="create-fields">
+                            <span>First Name</span>
+                            <input type="text" id="inFName" placeholder="First Name">
+                        </div>
+                        <div class="create-fields">
+                            <span>Last Name</span>
+                            <input type="text" id="inLName" placeholder="Last Name">
+                        </div>
+                        <div class="create-fields">
+                            <span>Birthday</span>
+                            <input type="date" id="inDate">
+                        </div>
+                        <div class="create-fields">
+                            <span>Change your Password</span>
+                            <input type="password" id="inPassword"
+                                placeholder="min 6 characters, with A-Z, number, Symbol">
+                        </div>
+                        <div class="create-fields">
+                            <span>Confirm Password</span>
+                            <input type="password" id="inConfirmPassword">
+                        </div>
+                        <button id="btnRegister" class="button-dark" onclick="updateProfile()">Update Profile</button>
+                        <br>
+                        <button id="btnDelRegister" class="button-dark" onclick="delRegister()">Delete Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="script/script.js"></script>
+    <script src="script/user.js"></script>
+</body>
+
+</html>

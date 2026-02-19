@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new flat</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/flat.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="header-left">
+            <img src="images/flatfinder.svg" class="logo" alt="logo"></img>
+        </div>
+        <div class="header-links">
+            <a href="index.html">home</a>
+            <a href="all-flats.html">all flats</a>
+            <a href="new-flat.html" class="active">new flat</a>
+            <a href="profile.html">profile</a>
+        </div>
+        <div class="header-greetings">
+            <div>Hello, <span id="greetings">Convidado</span>!</div>
+            <button class="logout" onclick="logout()">Logout <img src="images/logout.svg" alt=""></button>
+        </div>
+    </div>
+
+    <main class="hello">
+        <h2 class="hello-title">Add New Flat</h2>
+        <h2 class="hello-subtitle">Click on each text to edit the details</h2>
+        <div class="flat-cardNew">
+            <div class="flat-cardLNew">
+                <div class="card-city">
+                    <input type="text" id="inCity" placeholder="City">
+                </div>
+                <div>
+                    <input type="text" id="inStreet" placeholder="Street Name">
+                </div>
+                <div>
+                    <input type="text" id="inNumber" placeholder="Number">
+                </div>
+                <div>
+                    <input type="number" id="inArea" min="0" placeholder="Area (m2)">
+                </div>
+                <div>
+                    <input type="number" id="inYear" min="1800" max="2027" placeholder="Built Year">
+                </div>
+                <div>
+                    <input type="checkbox" id="hasAC" class="custom-checkbox" checked>
+                    <label for="hasAC">                        
+                    </label>
+                </div>
+            </div>
+            <div class="flat-cardRNew">
+                <div>
+                    <input type="number" id="inPrice" min="1" placeholder="Price (€)">
+                </div>
+                <div>
+                    <p class="DateAvailable">Available Date</p>
+                    <input type="date" id="inDateAvailable">
+                </div>
+            </div>
+        </div>
+        <div class="flat-cardBtn">
+            <button id="btnCreateFlat" onclick="CreateFlat()">Create Flat</button>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="script/script.js"></script>
+    <script src="script/flat.js"></script>
+</body>
+
+</html>

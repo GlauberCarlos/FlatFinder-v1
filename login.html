@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/user.css">
+</head>
+
+<body>
+    <div id="header-login">
+        <img src="images/flatfinder.svg" class="logo" alt="logo"></img>
+    </div>
+
+    <main class="hello">
+        <h2 class="hello-title">Login</h2>
+        <div class="hello-login">
+            <div class="login-block-up">
+                <div class="login-up-left">
+                    <div class="login-left-input">
+                        <span>Email</span>
+                        <input type="text" id="loginEmail">
+                    </div>
+                    <div class="login-left-input">
+                        <span>Password</span>
+                        <input type="password" id="loginPassword">
+                    </div>
+                </div>
+                <div class="login-up-right">
+                    <button id="btnLogin" class="button-dark" onclick="login()">Login</button>
+                </div>
+            </div>
+            <div class="login-block-down">
+                <div class="box-have-account">
+                    <p>Don't have an account?</p>
+                    <div class="login-register">
+                        <a href="register.html" class="button-dark">Register</a>
+                    </div>                    
+                </div>
+                <div class="box-forgot-pass">
+                    <p>Forgot your password?</p>
+                    <div class="login-delete">
+                        <div class="login-delete-input">
+                            <span>Email</span>
+                            <input type="email" id="delEmail">
+                        </div>
+                        <button id="btnDelRegister" class="button-light" onclick="delRegister()">Delete Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="script/script.js"></script>
+    <script src="script/user.js"></script>
+</body>
+
+</html>

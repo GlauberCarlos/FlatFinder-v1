@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/user.css">
+</head>
+
+<body>
+    <div id="header-login">
+        <img src="images/flatfinder.svg" class="logo" alt="logo"></img>
+    </div>
+
+    <main class="hello">
+        <h2 class="hello-title">Register</h2>
+        <div class="hello-register">
+            <div class="register-block-left">
+                <div class="box-create-profile">
+                    <p>Create you profile</p>
+                    <div class="create-profile">
+                        <div class="create-fields">
+                            <span>Email</span>
+                            <input type="email" id="inEmail" placeholder="name@example.com">
+                        </div>
+                        <div class="create-fields">
+                            <span>First Name</span>
+                            <input type="text" id="rFName" placeholder="A-Z, minimum 3 characters">
+                        </div>
+                        <div class="create-fields">
+                            <span>Last Name</span>
+                            <input type="text" id="rLName" placeholder="A-Z, minimum 3 characters">
+                        </div>
+                        <div class="create-fields">
+                            <span>Birthday</span>
+                            <input type="date" id="rDate">
+                        </div>
+                        <div class="create-fields">
+                            <span>Password</span>
+                            <input type="password" id="inPassword" placeholder="min 6 characters, with A-Z, number, Symbol">
+                        </div>
+                        <div class="create-fields">
+                            <span>Conf. Password</span>
+                            <input type="password" id="inConfirmPassword" >
+                        </div>
+                        <button id="btnRegister" class="button-dark" onclick="register()">Register</button>
+                    </div>
+                </div>
+            </div>
+            <div class="register-block-right">
+                <div class="box-have-account">
+                    <p>Already have an account?</p>
+                    <div class="login-register">
+                        <a class="button-dark" href="login.html">login</a>
+                    </div>
+                </div>
+                <div class="box-forgot-pass">
+                    <p>Forgot your password?</p>
+                    <div class="login-delete">
+                        <div class="login-delete-input">
+                            <span>Email</span>
+                            <input type="email" id="delEmail" placeholder="name@example.com">
+                        </div>
+                        <button id="btnDelRegister" class="button-light" onclick="delRegister()">Delete Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="script/script.js"></script>
+    <script src="script/user.js"></script>
+</body>
+
+</html>

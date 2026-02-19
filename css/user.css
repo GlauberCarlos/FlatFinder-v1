@@ -1,0 +1,235 @@
+:root {
+    --azul-dark: #36557D;
+    --azul-medium: #6C91C0;
+    --azul-light: #91A3BA;
+    --azul-box: #F1F4F9;
+    --branco: #FFFFFF;
+}
+
+.hello-login {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.login-block-up,
+.create-profile,
+.register-inputs {
+    background-color: var(--azul-box);
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px var(--azul-light);
+}
+
+.login-block-up {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+    gap: 5rem;
+}
+
+.login-up-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--azul-medium);
+    font-weight: 600;
+    gap: 1.5rem;
+}
+
+.login-left-input {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hello-login input,
+.create-fields input,
+.login-delete-input input {
+    border: none;
+    width: 16rem;
+}
+
+.login-block-down {
+    display: flex;
+    padding-top: 3rem;
+    margin-top: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    border-top: 3px solid var(--azul-box);
+    gap: 5rem;
+}
+
+.box-have-account,
+.box-forgot-pass,
+.register-block-left,
+.edit-block-left {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--azul-medium);
+    font-weight: 600;
+}
+
+.box-have-account p,
+.box-forgot-pass p,
+.box-create-profile p {
+    margin-bottom: 1rem;
+}
+
+.login-register,
+.login-delete {
+    width: 100%;
+    margin-bottom: 2.5rem;
+    padding: 2.2rem 0;
+    background-color: var(--azul-box);
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px var(--azul-light);
+}
+
+.login-delete {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem
+}
+
+.login-delete-input {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.login-delete button {
+    margin: 0 auto;
+}
+
+.hello-register {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.create-profile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem 2rem;
+}
+
+.register-block-left {
+    width: 50%;
+    /* border: red 1px solid; */
+}
+
+.register-block-right {
+    width: 50%;
+    /* border: red 1px solid; */
+}
+
+.edit-block-left {
+    width: 80%;
+    /* border: red 1px solid; */
+}
+
+.create-fields {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+}
+
+.create-fields input {
+    height: 50%;
+    width: 45%;
+}
+
+.create-fields input::placeholder,
+.login-delete-input input::placeholder {
+    color: var(--azul-light);
+    padding-left: 0.6rem;
+    font-family: 'Baloo';
+}
+
+.box-create-profile button {
+    margin: 0 auto;
+}
+
+
+.profile-email {
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--azul-light);
+    margin-bottom: 1rem;
+}
+
+.hello-profile {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    .hello {
+        margin-top: 15rem;
+    }
+
+    .hello-login {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .login-block-up {
+        flex-direction: column;
+        font-size: 1.2rem;
+        padding: 1.5rem 0;
+        gap: 1.5rem;
+    }
+
+    .login-block-down {
+        flex-direction: column;
+        padding-top: 2rem;
+        margin-top: 0;
+        border-top: none;
+        gap: 0;
+    }
+
+    .hello-register {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .create-profile {
+        padding: 1.2rem 0.8rem;
+    }
+
+    .register-block-left {
+        width: 100%;
+    }
+
+    .register-block-right {
+        width: 100%;
+    }
+
+    .profile-email {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .edit-block-left {
+        width: 100%;
+    }
+
+    .create-profile {
+        padding: 1.5rem 0.7rem;
+    }
+
+    .create-fields input {
+        width: 45%;
+    }
+
+    .create-fields span {
+        font-size: 1.2rem;
+    }
+
+}

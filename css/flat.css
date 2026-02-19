@@ -1,0 +1,493 @@
+:root {
+   --azul-dark: #36557D;
+   --azul-medium: #6C91C0;
+   --azul-light: #91A3BA;
+   --azul-box: #F1F4F9;
+   --branco: #FFFFFF;
+}
+
+/* HOME */
+
+.fav-flat-list {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 2.5rem;
+}
+
+.flat-card {
+   font-size: 1rem;
+   text-transform: capitalize;
+   width: 25rem;
+   height: 15rem;
+   display: flex;
+   justify-content: space-between;
+   padding: 0.7rem;
+   color: var(--azul-medium);
+   background-color: var(--azul-box);
+   border: var(--azul-medium) solid 2px;
+   border-radius: 10px;
+}
+
+.flat-card:hover {
+   background-color: var(--branco);
+   border: #8e8ede solid 2px;
+}
+
+.flat-cardL {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   text-align: left;
+}
+
+.flat-cardR button {
+   all: unset;
+}
+
+.flat-cardR {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   text-align: right;
+}
+
+.flat-cardR img {
+   height: 1.4rem;
+}
+
+.card-city,
+.card-price {
+   font-size: 1.2rem;
+   font-weight: 800;
+}
+
+/* ALL FLATS e NEW FLAT */
+
+#btnCreateFlat {
+   all: unset;
+   text-align: center;
+   font-size: 1rem;
+   padding: 0.3rem;
+   color: #f9f9f9;
+   background-color: #5191c2;
+   border: #5191c2 solid 1.5px;
+   border-radius: 3px;
+   transition: background-color ease 0.5s;
+}
+
+#btnCreateFlat:hover {
+   background-color: #f9f9f9;
+   color: #5191c2;
+   cursor: pointer;
+}
+
+.filters {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 3rem 0;
+   gap: 1.5rem;
+   background-color: var(--azul-light);
+   border-radius: 10px;
+}
+
+.filters-block,
+.filters-clear {
+   align-self: flex-start;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   text-align: center;
+   color: var(--branco);
+   font-size: 1.5rem;
+   font-weight: 600;
+   padding: 1rem;
+}
+
+.filters-clear {
+   align-self: center;
+}
+
+.symbol {
+   font-size: 0.9rem;
+   font-weight: 200;
+}
+
+.filters-block input {
+   border: none;
+   height: 2rem;
+   width: 8rem;
+   margin: 0.2rem;
+   color: var(--azul-medium);
+   padding-left: 0.6rem;
+   border-radius: 5px;
+   font-family: 'Baloo';
+   font-weight: 600;
+}
+
+#filterCity {
+   margin-bottom: 1.5rem;
+   width: 12rem;
+}
+
+.filters-clear button {
+   all: unset;
+   background-color: var(--azul-dark);
+   padding: 0.5rem 1.6rem;
+   border-radius: 7px;
+   font-weight: 600;
+   text-transform: capitalize;
+   cursor: pointer;
+}
+
+.filters-clear button:hover {
+   background-color: var(--azul-box);
+   color: var(--azul-medium);
+}
+
+table {
+   color: var(--azul-medium);
+   text-transform: capitalize;
+   width: 100%;
+   table-layout: auto;
+   border-collapse: collapse;
+}
+
+.th-content {
+   display: flex;
+   align-items: center;
+   gap: 0.8rem;
+   cursor: pointer;
+   font-size: 1.2rem;
+   padding: 0 0 1rem 0;
+   text-align: left;
+}
+
+table img {
+   height: 1rem;
+   max-width: 1rem;
+}
+
+tbody tr:nth-child(odd) {
+   background-color: var(--azul-box);
+}
+
+tbody tr:nth-child(even) {
+   background-color: var(--branco);
+}
+
+.table-big {
+   width: 35%;
+}
+
+.table-medium {
+   width: 50rem;
+}
+
+.table-small {
+   width: 20rem;
+}
+
+.actions {
+   width: 3rem;
+}
+
+.table-favdel button {
+   all: unset;
+   padding: 0.8rem;
+}
+
+.table-favdel button:hover {
+   filter: opacity(0.4);
+   cursor: pointer;
+}
+
+/* --------- */
+
+.flat-window {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.new-flat-input {
+   display: flex;
+   justify-content: center;
+}
+
+.new-flat-sides {
+   display: flex;
+   flex-direction: column;
+   margin: 3rem 0;
+}
+
+.new-flat-create {
+   margin: 0 auto;
+}
+
+.new-flat-block,
+.new-flat-create {
+   margin: 1rem;
+   width: 20rem;
+   text-align: center;
+   font-size: 1.1rem;
+   padding: 1rem;
+   background-color: #f9f9f9;
+   border: #5191c2 solid 1.5px;
+   border-radius: 5px;
+   transition: background-color ease 0.5s;
+}
+
+.new-flat-block p,
+.new-flat-create p {
+   font-size: 1.3rem;
+   font-weight: 700;
+   margin-bottom: 1rem;
+   color: #5191c2;
+}
+
+.new-flat-block:hover,
+.new-flat-create:hover {
+   background-color: #f4fafe;
+   border: #2a506c solid 1.5px;
+}
+
+/* edit flat */
+
+dialog {
+   position: relative;
+   border: none;
+   border-radius: 15px;
+   width: 70%;
+}
+
+dialog::backdrop {
+   background-color: rgba(0, 0, 0, 0.5);
+}
+
+#closeModalFlat {
+   all: unset;
+   position: absolute;
+   top: 1.3rem;
+   right: 1.3rem;
+   height: 2rem;
+   width: 2rem;
+   border-radius: 1rem;
+   background-color: #5191c2;
+   color: #f4fafe;
+   text-align: center;
+   font-weight: 1000;
+}
+
+#closeModalFlat:hover {
+   cursor: pointer;
+   background-color: #a3ceed;
+}
+
+.edit-flat:hover,
+.desfav-flat:hover {
+   cursor: pointer;
+}
+
+/* TESTE CARD NEW FLAT */
+
+#inCity,
+#inStreet,
+#inNumber,
+#inArea,
+#inYear,
+#inPrice,
+#inDateAvailable {
+   all: unset;
+   color: var(--azul-medium);
+}
+
+#inCity::placeholder,
+#inStreet::placeholder,
+#inNumber::placeholder,
+#inArea::placeholder,
+#inYear::placeholder,
+#inPrice::placeholder,
+#inDateAvailable::placeholder {
+   color: var(--azul-medium);
+}
+
+.flat-cardNew {
+   margin: 0 auto;
+   text-transform: capitalize;
+   max-width: 70%;
+   min-width: 35rem;
+   display: flex;
+   justify-content: space-between;
+   padding: 1.2rem 2rem;
+   color: var(--azul-medium);
+   background-color: var(--azul-box);
+   border: var(--azul-medium) solid 3px;
+   border-radius: 20px;
+}
+
+.flat-cardLNew {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   text-align: left;
+   justify-content: space-between;
+   gap: 2rem;
+   /* border: red solid 1px; */
+}
+
+.flat-cardRNew {
+   width: 30%;
+   display: flex;
+   flex-direction: column;
+   align-items: end;
+   text-align: right;
+   justify-content: space-between;
+   /* border: rgb(0, 255, 0) solid 1px; */
+}
+
+#inCity,
+#inStreet,
+#inNumber,
+#inArea,
+#inYear,
+#inPrice,
+#inDateAvailable,
+.flat-cardRNew p {
+   width: 95%;
+   font-size: 2.2rem;
+   letter-spacing: 1px;
+   /* border: red solid 1px; */
+}
+
+.custom-checkbox {
+   display: none;
+}
+
+.custom-checkbox+label::before {
+   content: url(../images/noac.svg);
+}
+
+.custom-checkbox:checked+label::before {
+   content: url(../images/ac.svg);
+}
+
+#inPrice {
+   width: 100%;
+   /* border: red solid 1px; */
+}
+
+.DateAvailable {
+   margin: 0 auto;
+}
+
+.flat-cardBtn {
+   text-align: center;
+   margin: 3rem auto 0;
+}
+
+#btnCreateFlat {
+   padding: 1rem 2rem;
+   font-size: 2rem;
+   font-weight: 800;
+   border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+   .filters {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin: 1rem 0;
+      gap: 0.5rem;
+   }
+
+   .filters-block,
+   .filters-clear {
+      align-self: normal;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 0;
+   }
+
+   .filters-block input {
+      width: 60%;
+      margin: 0.2rem auto;
+   }
+
+   #filterCity {
+      margin-bottom: 0;
+      width: 60%;
+   }
+
+   .filters-clear button {
+      padding: 0.5rem 2.6rem;
+      margin: 1rem auto;
+   }
+
+   table {
+      font-size: 0.8rem;
+   }
+
+   .th-content {
+      font-size: 1rem;
+      padding: 0 0.1rem;
+      gap: 0.5rem;
+      border-right: var(--azul-light) dashed 1px;
+   }
+
+   table img {
+      height: 0.6rem;
+      max-width: 0.6rem;
+   }
+
+   .table-big {
+      width: 100%;
+   }
+
+   .table-medium {
+      width: 0rem;
+      padding-right: 0.5rem;
+   }
+
+   .table-small {
+      width: 1rem;
+   }
+
+   .actions {
+      width: 0.5rem;
+   }
+
+   .table-favdel button {
+      all: unset;
+      padding: 0.2rem;
+   }
+
+   .flat-cardNew {
+      max-width: 100%;
+      min-width: 0;
+      padding: 1rem 0.75rem;
+   }
+
+   .flat-cardLNew {
+      gap: 1rem;
+   }
+
+   #inCity,
+   #inStreet,
+   #inNumber,
+   #inArea,
+   #inYear,
+   #inPrice,
+   #inDateAvailable,
+   .flat-cardRNew p {
+      font-size: 1.5rem;
+   }
+
+   dialog {
+      width: 95%;
+   }
+
+}

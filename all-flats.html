@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>all flats</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/flat.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="header-left">
+            <img src="images/flatfinder.svg" class="logo" alt="logo"></img>
+        </div>
+        <div class="header-links">
+            <a href="index.html">home</a>
+            <a href="all-flats.html" class="active">all flats</a>
+            <a href="new-flat.html">new flat</a>
+            <a href="profile.html">profile</a>
+        </div>
+        <div class="header-greetings">
+            <div>Hello, <span id="greetings">Convidado</span>!</div>
+            <button class="logout" onclick="logout()">Logout <img src="images/logout.svg" alt=""></button>
+        </div>
+    </div>
+
+    <main class="hello">
+        <h2 class="hello-title">All Flats List</h2>
+        <div class="filters">
+            <div class="filters-block">
+                <p>City</p>
+                <input type="text" name="filterCity" id="filterCity" oninput="flatFilterCity()">
+            </div>
+            <div class="filters-block">
+                <p>Price <span class="symbol">€</span></p>
+                <input type="number" min="0" id="filterPriceMin" oninput="flatFilterPMin()">
+                <input type="number" min="1" id="filterPriceMax" oninput="flatFilterPMax()">
+            </div>
+            <div class="filters-block">
+                <p>Area <span class="symbol">m<sup>2</sup></span></p>
+                <input type="number" min="0" id="filterAreaMin" oninput="flatFilterAMin()">
+                <input type="number" min="1" id="filterAreaMax" oninput="flatFilterAMax()">
+            </div>
+            <div class="filters-clear">
+                <button onclick="cleanFilters()">
+                    <p>clear</p>
+                    <p>filters</p>
+                </button>
+            </div>
+        </div>
+
+        <table id="all-flats-table">
+            <thead>
+                <tr>
+                    <th class="table-medium">
+                        <div class="th-content" onclick="sortCity()">
+                            city
+                            <img src="images/order-mid.svg" id="sortCityIcon">
+                        </div>
+                    </th>
+                    <th class="table-big">
+                        <div class="th-content">
+                            address
+                        </div>
+                    </th>
+                    <th class="table-small">
+                        <div class="th-content" onclick="sortArea()">
+                            area
+                            <img src="images/order-mid.svg" id="sortAreaIcon">
+                        </div>
+                    </th>
+                    <th class="table-small">
+                        <div class="th-content">
+                            year
+                        </div>
+                    </th>
+                    <th class="table-small">
+                        <div class="th-content">
+                            AC
+                        </div>
+                    </th>
+                    <th class="table-small">
+                        <div class="th-content" onclick="sortPrice()">
+                            price
+                            <img src="images/order-mid.svg" id="sortPriceIcon">
+                        </div>
+                    </th>
+                    <th class="table-small">
+                        <div class="th-content">
+                            Available
+                        </div>
+                    </th>
+                    <th class="actions"> </th>
+                    <th class="actions"> </th>
+                    <th class="actions"> </th>
+                </tr>
+            </thead>
+            <tbody id="allFlatList"></tbody>
+        </table>
+    </main>
+
+    <dialog id="modalFlat">
+        <h2 class="hello-title">Edit Flat</h2>
+        <h2 class="hello-subtitle">Click on each text to edit the details</h2>
+        <div class="flat-cardNew">
+            <div class="flat-cardLNew">
+                <div class="card-city">
+                    City
+                    <input type="text" id="inCity" placeholder="City">
+                </div>
+                <div>
+                    Street Name
+                    <input type="text" id="inStreet" placeholder="Street Name">
+                </div>
+                <div>
+                    Number
+                    <input type="text" id="inNumber" placeholder="Number">
+                </div>
+                <div>
+                    Area (m<sup>2</sup>)
+                    <input type="number" id="inArea" min="0" placeholder="Area (m2)">
+                </div>
+                <div>
+                    Built Year
+                    <input type="number" id="inYear" min="1800" max="2027" placeholder="Built Year">
+                </div>
+                <div>
+                    <input type="checkbox" id="hasAC" class="custom-checkbox" checked>
+                    <label for="hasAC">
+                    </label>
+                </div>
+            </div>
+            <div class="flat-cardRNew">
+                <div>
+                    Price (€)
+                    <input type="number" id="inPrice" min="1" placeholder="Price (€)">
+                </div>
+                <div>
+                    <p class="DateAvailable">Available Date</p>
+                    <input type="date" id="inDateAvailable">
+                </div>
+            </div>
+        </div>
+        <div class="flat-cardBtn">
+            <button id="btnCreateFlat" onclick="saveEditFlat()">Update Flat</button>
+        </div>
+        <button id="closeModalFlat">X</button>
+    </dialog>
+
+    <div id="footer"></div>
+
+    <script src="script/script.js"></script>
+    <script src="script/flat.js"></script>
+</body>
+
+</html>
